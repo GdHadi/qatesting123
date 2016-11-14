@@ -3,17 +3,21 @@ package com.wpqa123.homepage;
 //import static org.junit.Assert.*;
 
 //import org.junit.Test;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AdminpageTest {
-
+	
 WebDriver driver;
 
-    public void setup(){
-	driver = new ChromeDriver();
-	driver.get("http://www.yahoo.com");
-    }
+@Before
+public void setup(){
+	driver = new FirefoxDriver ();
+	driver.get("https://qatesting123.wordpress.com/wp-admin");
+   }
+
+@Test
 
 
 }

@@ -21,15 +21,23 @@ public class Adminpage {
 		WebElement passElement = driver.findElement(By.name("pwd"));
 		WebElement logbtnElement = driver.findElement (By.id("wp-submit"));
 		
+				
 		//Enter username and pass
 		userElement.sendKeys("qatesting123");
 		passElement.sendKeys("qwerty54321");
 		
 		//submit login form
 		logbtnElement.submit();
-	
+			
+		//Find and click account element
+		driver.findElement(By.xpath("//*[@id='wp-admin-bar-my-account']")).click();
+		
+		//Find and click logout element
+		//driver.findElement(By.xpath("//*[@id='wp-admin-bar-user-info']/div/form/button")).click();
+        //driver.findElement(By.cssSelector("button [class='wp-admin-bar-user-info']")).click();
+			
 	    //Close the driver for Team
-        //driver.quit();
+        driver.quit();
 				
 	}
 
