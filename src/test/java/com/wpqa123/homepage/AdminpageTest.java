@@ -4,6 +4,7 @@ package com.wpqa123.homepage;
 
 //import org.junit.Test;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -17,6 +18,9 @@ public void setup(){
    }
 
 @Test
+public void test1 (){
+
+    }
 
 
 }
