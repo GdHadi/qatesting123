@@ -34,8 +34,7 @@ public class Adminpage {
 		
 		//Find and click logout element
 		//driver.findElement(By.xpath("//*[@id='wp-admin-bar-user-info']/div/form/button")).click();
-        //driver.findElement(By.cssSelector("button [class='wp-admin-bar-user-info']")).click();
-			
+ 			
 	    //Close the driver for Team
         driver.quit();
 				
