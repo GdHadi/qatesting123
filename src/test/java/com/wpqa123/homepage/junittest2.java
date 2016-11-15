@@ -31,6 +31,7 @@ public class junittest2 {
 	  }
 	  
 	  @Test
+	  //modified
 	  public void test2() throws InterruptedException {
 	  driver.findElement(By.xpath("//input[@name='fname']")).sendKeys("junittest2 class-test2");
 	  Thread.sleep(2000);
