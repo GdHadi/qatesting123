@@ -1,5 +1,7 @@
 package com.qatesting123.test;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,19 +15,22 @@ public class LoginPage_test {
 		System.setProperty("webdriver.chrome.driver","H:\\Office\\Training\\Selenium\\Chrome\\chromedriver.exe");
 		ChromeDriver driver=new ChromeDriver();
 		
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();			
 		driver.get("https://qatesting123.wordpress.com/wp-login.php");
+		
 		//login process
-		LoginPage login=new LoginPage(driver);
+		LoginPage login=new LoginPage(driver);	
 		login.typeUserName();
 		login.typePassword();
 		login.clickLoginButton();
 		
-		if (driver.getPageSource().contains ("Dasbor")) {
-			System.out.println("Dashboard is opened");			
-		}else{
-			System.out.println("Failed to open Dashboard");
-		}
+		//if (driver.getPageSource().contains ("Dasbor")) {
+		//	System.out.println("Dashboard is opened");			
+		//}else{
+		//	System.out.println("Failed to open Dashboard");
+		//}
+		assertTrue(driver.getPageSource().contains ("Dasbor"));
+		System.out.println("Successfully login to Dashboard");
 		
 		driver.quit();
 		

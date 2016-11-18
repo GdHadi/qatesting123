@@ -30,20 +30,20 @@ public class AdminPage_test {
 		}
 	
 	AdminPage click = new AdminPage (driver);
-	//validate click
+
 	//click.clickExpand();
 	//if (driver.getPageSource().contains("collapse-button")) {
-		//System.out.println("Expand icon is there");
-		//}else{
-		//System.out.println("Failed to found Expand icon");	
-		//}
+	//	System.out.println("Expand icon is there");
+	//	}else{
+	//	System.out.println("Failed to found Expand icon");	
+	//	}
 	
 	click.clickPostIcon();
 	if (driver.getPageSource().contains("menu-posts")) {
-		System.out.println("Post icon is there");
-		}else{
-		System.out.println("Failed to found Post icon");	
-		}
+	System.out.println("Post icon is there");
+	}else{
+	System.out.println("Failed to found Post icon");	
+	}
 	
 	click.clickPageIcon();
 	if (driver.getPageSource().contains("menu-pages")) {
@@ -51,6 +51,7 @@ public class AdminPage_test {
 		}else{
 		System.out.println("Failed to found Page icon");	
 		}	
+	//click.clickPostPage();
 	
 	click.clickAvatar();
 	if (driver.getPageSource().contains("wp-admin-bar-my-account")) {
@@ -67,12 +68,12 @@ public class AdminPage_test {
 	if (driver.getCurrentUrl().contains ("https://wordpress.com")) {
 		System.out.println("Successfully Logout");			
 	}else{
-		System.out.println("Faied to logout");
+		System.out.println("Failed to logout");
 	}	
 
 	//close driver
 	driver.quit();
 	
 	}
+  } 
 
-}

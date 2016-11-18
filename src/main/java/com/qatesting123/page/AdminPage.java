@@ -14,12 +14,15 @@ public class AdminPage {
     public AdminPage (WebDriver driver){
     	this.driver=driver;
     }
-    //public void clickExpand(){
-    //driver.findElement(By.xpath("//*[@id='collapse-button']/div")).click(); 	
-    //}
+    public void clickExpand(){
+    driver.findElement(By.xpath("//*[@id='collapse-button']/div")).click(); 	
+    }
     public void clickPostIcon(){
        driver.findElement (By.xpath("//*[@id='menu-posts']/a/div[2]")).click();
     }
+    public void clickPostPage(){
+        driver.findElement (By.xpath("//*[@id='menu-posts']/ul/li[2]/a")).click();
+     }
     public void clickPageIcon(){
         driver.findElement (By.xpath("//*[@id='menu-pages']/a/div[3]")).click();
      }
