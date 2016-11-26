@@ -25,4 +25,9 @@ public class PostPage {
 	public void GridAuthor(){
 		driver.findElement(By.xpath("//*[@id='author']"));
 	}
+
+	public void clickPostButton() {
+		// TODO Auto-generated method stub
+		driver.findElement(By.xpath("//*[@id='wpbody-content']/div[3]/h1/a")).click();
+	}
 }
